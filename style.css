@@ -1,0 +1,103 @@
+/*Använder * för att ändra på alla taggar samtidigt, och tar här bort de margin och paddings som finns som default. Ändrar även font-family här för och slippa göra det separat på alla sen.*/
+* {
+	/*Tar bort mellanrum emellan element, gör detta i huvudsak för navigationen*/
+	margin: 0;
+	/*Tar bort mellanrum mellan element och skärmkant, gör detta i huvudsak för navigationen*/
+	padding: 0;
+	/*Ändrar vilken font som används för hela sidan*/
+	font-family: 'Times New Roman', Times, serif;
+}
+/*Skapar ett grid som delar upp de olika delarna på sidan, såsom header, main och footer*/
+.container{
+	/*Skapar kolumner i griden*/
+	grid-template-columns: 1fr 1fr 1fr;
+	/*Skapar rader i griden*/
+	grid-template-rows: 80px auto 100px;
+	/*Visar hur de olika elementen ska placeras ut i mitt grid*/
+	grid-template-areas: 
+	"header header header"
+	"main main main"
+	"footer footer footer";
+	/*Används för att kunna se gridet och göra eventuella ändringar utifrån det*/
+	display: grid;
+}
+/*Skapar ett seperat grid för navigationen*/
+.list-grid{
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+	"li li li";
+	display: grid;
+}
+/*Skapar ett seperat grid för main elementet och de elementen som ska vara i main*/
+.main-grid{
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	display: grid;
+}
+
+header{
+	grid-area: header;
+	background-color: black;
+}
+main{
+	grid-area: main;
+	height: 750px;
+	background-color: rgb(255, 255, 255);
+	padding: 30px;
+}
+footer{
+	grid-area: footer;
+	background-color: rgb(92, 92, 92);
+}
+ul{
+	list-style-type: none;
+}
+ul li{
+	text-align: center;
+}
+ul li a{
+	text-decoration: none;
+	color: white;
+	font-size: 2em;
+	display: block;
+	line-height: 80px;
+}
+ul li p{
+	color:white;
+	text-align: center;
+	font-size: 2em;
+	line-height: 80px;
+	text-decoration: underline;
+}
+ul li a:hover{
+	background-color: gray;
+}
+.footer-grid{
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 100px;
+	display: grid;
+	align-items: center;
+}
+footer p{
+	font-size: 25px;
+	text-align: center;
+}
+footer a{
+	font-size: 25px;
+	text-decoration: none;
+	color: black;
+	text-align: center;
+}
+footer a:hover{
+	color: white;
+}
+
+table, th, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+tr:nth-child(even){
+	background-color: rgb(100, 100, 100);
+	color: white;
+}
