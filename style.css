@@ -12,10 +12,11 @@
 	/*Skapar kolumner i griden*/
 	grid-template-columns: 1fr 1fr 1fr;
 	/*Skapar rader i griden*/
-	grid-template-rows: 80px auto 100px;
+	grid-template-rows: 50px 80px auto 100px;
 	/*Visar hur de olika elementen ska placeras ut i mitt grid*/
 	grid-template-areas: 
 	"header header header"
+	"nav nav nav"
 	"main main main"
 	"footer footer footer";
 	/*Används för att kunna se gridet och göra eventuella ändringar utifrån det*/
@@ -39,6 +40,13 @@
 header{
 	grid-area: header;
 	background-color: black;
+	color: white;
+	text-align: center;
+	text-decoration: underline;
+}
+nav {
+	grid-area: nav;
+	background-color: #757575;
 }
 main{
 	grid-area: main;
@@ -71,7 +79,7 @@ ul li p{
 	text-decoration: underline;
 }
 ul li a:hover{
-	background-color: gray;
+	background-color: #a1a1a1;
 }
 .footer-grid{
 	grid-template-columns: 1fr 1fr 1fr;
@@ -92,7 +100,9 @@ footer a{
 footer a:hover{
 	color: white;
 }
-
+table{
+	margin: auto;
+}
 table, th, td{
 	border: 1px solid black;
 	border-collapse: collapse;
@@ -100,4 +110,12 @@ table, th, td{
 tr:nth-child(even){
 	background-color: rgb(100, 100, 100);
 	color: white;
+}
+.adjust{
+	font-size: 18px;
+	text-align: center;
+}
+div img{
+	height: 200px;
+	width: 450px;
 }
