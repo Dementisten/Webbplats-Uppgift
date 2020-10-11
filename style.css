@@ -36,86 +36,108 @@
 	grid-template-rows: 1fr 1fr;
 	display: grid;
 }
-
+/*En typselektor för header taggen*/
 header{
+	/*Säger vart i huvudgridden header taggen ska vara*/
 	grid-area: header;
+	/*Bestämmer en bakgrundsfärg, i detta fall svart*/
 	background-color: black;
+	/*Ändrar textfärg*/
 	color: white;
+	/*Centrerar texten i mitten*/
 	text-align: center;
+	/*Lägger på underline på all text i header taggen*/
 	text-decoration: underline;
 }
+/*En typselektor för nav taggen*/
 nav {
 	grid-area: nav;
+	/*Ändrar bakgrundfärg, i detta fall med hjälp av hex färgkod*/
 	background-color: #757575;
 }
+/*En typselektor för main taggen*/
 main{
 	grid-area: main;
+	/*Ändrar höjden på elementet*/
 	height: 750px;
 	background-color: rgb(255, 255, 255);
+	/*Lägger till mellanrum mellan element och skärmkant, för att göra det snyggare och lättare att läsa*/
 	padding: 30px;
 }
+/*En typselektor för footer taggen*/
 footer{
 	grid-area: footer;
 	background-color: rgb(92, 92, 92);
 }
+/*En typselektor för ul taggen*/
 ul{
+	/*Ändrar typen av "list prick" som visas, i detta fall tar jag bort den helt*/
 	list-style-type: none;
 }
+/*En avkomlingsselektor för li taggen i ul taggen*/
 ul li{
 	text-align: center;
 }
+/*En avkomlingsselektor för a taggen i li taggen i ul taggen*/
 ul li a{
 	text-decoration: none;
 	color: white;
+	/*Ändrar textstorleken, 2em betyder 2 gånger den orginella storleken*/
 	font-size: 2em;
+	/*Låter mig ändra höjden på elementet*/
 	display: block;
+	/*Ändrar höjden på a elementet för att kunna klicka på en hel box istället för bara på texten*/
 	line-height: 80px;
 }
-ul li p{
-	color:white;
-	text-align: center;
-	font-size: 2em;
-	line-height: 80px;
-	text-decoration: underline;
-}
+/*Psuedoklass för a taggen i li taggen i ul taggen, som bara är aktiv när man håller över a taggen */
 ul li a:hover{
 	background-color: #a1a1a1;
 }
+/*Gör ett seperat grid för min footer*/
 .footer-grid{
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 100px;
 	display: grid;
+	/*Alla element i griddet blir centrerade i mitten av sin ruta*/
 	align-items: center;
 }
+/*Avkomlingsselektor för p taggen i footer taggen*/
 footer p{
 	font-size: 25px;
 	text-align: center;
 }
+/*Avkomlingsselektor för a taggen i footer taggen*/
 footer a{
 	font-size: 25px;
 	text-decoration: none;
 	color: black;
 	text-align: center;
 }
+/*Psuedoklass för a taggen i footer taggen som bara är aktiv när man håller över a taggen*/
 footer a:hover{
 	color: white;
 }
-table{
-	margin: auto;
-}
+/*Gruppselektor för table, th och td taggerna*/
 table, th, td{
+	/*Skapar en border runt alla celler i tabellen, 1px står för bredden på bordern, solid står för att det ska vara en vanlig linje, black står för färgen på bordern*/
 	border: 1px solid black;
+	/*Kollapsar närliggande borders med varandra.*/
 	border-collapse: collapse;
 }
+/*Psuedoklass för tr taggen som bara är aktiv på alla jämna tabell rader. "Even" står för att det ska vara på alla jämna nummer*/
 tr:nth-child(even){
 	background-color: rgb(100, 100, 100);
 	color: white;
 }
+/*Klassselektor vid namn "adjust"*/
 .adjust{
 	font-size: 18px;
 	text-align: center;
 }
+/*Avkomlingsselektor för img taggen i div taggen*/
 div img{
+	/*Ändrar höjden på bilderna*/
 	height: 200px;
+	/*Ändrar bredden på bilderna*/
 	width: 450px;
 }

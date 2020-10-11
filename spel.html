@@ -2,12 +2,11 @@
 <!DOCTYPE html>
 <!--Bestämmer vilket språk uppläsningen ska använda-->
 <html lang="sv">
-	<!--head tag, bestämmer t.ex. vilken teckentolkning, fliknamn osv. Ingenting som syns på själva sidan-->
 	<head>
-		<!--Säger vilken teckentolkning som ska användas, i detta fall utf-8-->
+		<!---->
 		<meta charset="utf-8">
 		<!--Bestämmer titel på fliken-->
-		<title>Ville's Sida: Huvudsida</title>
+		<title>Ville's Sida: Spel</title>
 		<!--Länkar in css filen och bestämmer den som en stylesheet-->
 		<link href="style.css" rel="stylesheet">
 	</head>
@@ -15,8 +14,7 @@
 	<body class="container">
 		<!--Semantisk header tag-->
 		<header>
-			<!--H1 tag, Den mest betydelsefulla rubriken på sidan-->
-			<h1>Huvudsida</h1>
+			<h1>Spel</h1>
 		</header>
 		<!--Semantisk nav tag-->
 		<nav>
@@ -36,16 +34,14 @@
 			</ul>
 		</nav>
 		<!--Semantisk main tag, används för huvudinnehållet på sidan-->
-		<main class="main-grid">
-			<!--Div tag, Samlar flera element till ett enda element, används för att kunna stoppa in i griddet enklare-->
-			<div>
-				<!--H2 tag, Den näst mest betydelsefulla rubriken på sidan-->
-				<h2>Om mig:</h2>
-				<!--P tag, används för helt vanlig text på sidan-->
-				<p>Jag är en kille på 17 år som bor med min familj som består av mamma, pappa, syster och hund i en villa på teleborg. Här har vi bott hela mitt liv. </p>
-				<p>Jag fyller år den 7 juni och går just nu andra året på Teknik Programmet på Teknikum.</p>
-			</div>
-
+		<main>
+			<h2>Favorit spel</h2>
+			<!--Ordered List tagg, alltså en sorterad lista-->
+			<ol>
+				<li>Rust</li>
+				<li>Rainbow Six Seige</li>
+				<li>Overwatch</li>
+			</ol>
 		</main>
 		<!--Semantisk footer tag-->
 		<footer class="footer-grid">
